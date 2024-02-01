@@ -2,7 +2,8 @@ import {ParallaxBanner, ParallaxBannerLayer, ParallaxProvider} from 'react-scrol
 import React from 'react';
 
 
-function ParallaxSection() {
+
+export default function ParallaxSection() {
   return (
       <ParallaxProvider>
         <ParallaxBanner style={{aspectRatio: '16 / 9'}}>
@@ -19,6 +20,4 @@ function ParallaxSection() {
         </ParallaxBanner>
       </ParallaxProvider>
   );
-}
-
-export default ParallaxSection;
+};

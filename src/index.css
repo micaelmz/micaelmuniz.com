@@ -32,6 +32,27 @@
   background: linear-gradient(180deg, #2e1f3b 0%, #3f1e5a 100%);
 }
 
+.project-modal{
+  padding: 2%;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #3f1e5a 0%, #2e1f3b 100%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  box-shadow: black;
+}
+.modal-text-box {
+  border: 1.5px solid white;
+  padding: 7.5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60%;
+}
+
 .custom-button {
   border: none;
   padding: 0.8rem 2rem; /* Padding */
@@ -44,4 +65,7 @@
   font-size: 0.8rem;
   cursor: pointer;
   border-radius: 0.7rem;
+}
+.custom-button:hover{
+  filter: brightness(0.8);
 }

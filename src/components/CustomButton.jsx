@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function CustomButton({ backgroundColor, textColor, href, className, children }){
+export default function CustomButton({ backgroundColor, textColor, className, children, onClick}){
   return (
-      <a href={href ? href : "#"} style={{backgroundColor: backgroundColor, color: textColor}} className={className + " custom-button"}>{children}</a>
+      <button {...onClick && { onClick }} style={{ backgroundColor, color: textColor }} className={className + " custom-button"}>{children}</button>
   )
 }

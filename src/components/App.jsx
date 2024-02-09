@@ -4,11 +4,15 @@ import {Row, Column} from "./layout";
 import GradientSection from "./GradientSection";
 import ProjectCard from "./ProjectCard";
 import CustomButton from "./CustomButton";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 function App() {
 
   return (
-      <div>
+      <>
+
         <GradientSection index={0} id="home">
           <Row className="pt-24">
             <Column w={9} className="ps-28 pt-24">
@@ -22,6 +26,7 @@ function App() {
             </Column>
           </Row>
         </GradientSection>
+
         <GradientSection index={1} id="about">
           <Row className="pt-32 px-28">
             <Column w={6}>
@@ -37,6 +42,7 @@ function App() {
             </Column>
           </Row>
         </GradientSection>
+
         <GradientSection index={2} id="projects">
           <hr className="w-2/3 mx-auto"></hr>
           <Row className="pt-24 px-28">
@@ -45,17 +51,60 @@ function App() {
           </Row>
           <Row className="mx-28 align-middle justify-between mt-10">
             <ProjectCard
-              title="Rovena"
-              description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
-              url="https://teste.com"
-              image={require('../assets/img/sample.jpg')}
-              variation="left"
+                title="Rovena"
+                description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
+                url="https://teste.com"
+                image={require('../assets/img/sample.jpg')}
+                variation="right"
             />
-            {/*<ProjectCard>Lorem Ipsum</ProjectCard>*/}
-            {/*<ProjectCard>Vidas Website</ProjectCard>*/}
+            <ProjectCard
+                title="Rovena2"
+                description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
+                url="https://teste.com"
+                image={require('../assets/img/sample.jpg')}
+                variation="left"
+            />
+            <ProjectCard
+                title="Rovena3"
+                description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
+                url="https://teste.com"
+                image={require('../assets/img/sample.jpg')}
+                variation="right"
+            />
           </Row>
         </GradientSection>
-      </div>
+
+        <GradientSection index={3} id="contact">
+          <Row className="py-24 px-28 h-full">
+            <Column w={6} className="h-full">
+              <Row className="flex-col justify-between relative h-full">
+                <h2 className="tt-interfaces text-3xl text-white font-bold tracking-wider">Vamos conversar</h2>
+
+                <div>
+                  <h4 className="lastica text-white text-xl mb-2">EMAIL</h4>
+                  <p className="tt-interfaces text-white text-xl tracking-wider mb-10">contato@micaelmuniz.com</p>
+
+                  <h4 className="lastica text-white text-xl mb-2">TELEFONE</h4>
+                  <p className="tt-interfaces text-white text-xl tracking-wider">(11) 99999-9999</p>
+                </div>
+
+                <div className="flex p-6 border border-white border-solid border-1.5 w-4/5">
+                  <h5 className="lastica text-white text-2xl">SOCIAL</h5>
+                  <Row className="ms-auto" gap="1rem">
+                    <a href="#github" className="ms-4"><GitHubIcon style={{color: "white"}} fontSize="large"/></a>
+                    <a href="#linkedin"><LinkedInIcon style={{color: "white"}} fontSize="large"/></a>
+                    <a href="#instagram"><InstagramIcon style={{color: "white"}} fontSize="large"/></a>
+                  </Row>
+                </div>
+              </Row>
+            </Column>
+            <Column w={6}>
+              <img src={require('../assets/img/lavagifs/lava_prop_6.gif')} alt="gif" className="ms-auto w-[80%]"/>
+            </Column>
+          </Row>
+        </GradientSection>
+
+      </>
   );
 }
 

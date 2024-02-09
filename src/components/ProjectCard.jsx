@@ -9,7 +9,18 @@ export default function ProjectCard({title, description, url, image, variation})
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
   const projectBackgroundImage = require('../assets/img/lavagifs/lava_prop_5.gif');
+  const variations = {
+    right: {
+      background: "",
+      foreground: "-top-[110%] left-[20%] transform -translate-y-[110%] -translate-x-[20%]"
+    },
+    left: {
+      background: "transform rotate-180",
+      foreground: "-top-[115%] left-[10%] transform -translate-y-[115%] -translate-x-[10%]"
+    }
+  }
 
   return (
       <div className="h-[40vh] w-[47vh] bg-white flex items-center justify-center text-fuchsia-500 hover:bg-fuchsia-500 hover:text-white">
@@ -31,7 +42,6 @@ export default function ProjectCard({title, description, url, image, variation})
                   <p className="text-white tt-interfaces">
                     {description}
                   </p>
-
                   {url ? (
                       <a href={url} target="_blank">
                         <CustomButton backgroundColor="#d63cbd" textColor="white" className="w-1/3">
@@ -47,19 +57,8 @@ export default function ProjectCard({title, description, url, image, variation})
               </Column>
               <Column w={6}>
                 <Row className="justify-end">
-                  {
-                    variation === "right" ? (
-                      <>
-                        <img src={projectBackgroundImage} className="w-[55vh]" alt="background-project"/>
-                        <img src={image} className="rounded-full w-[45vh] aspect-square -top-[110%] left-[20%] transform -translate-y-[110%] -translate-x-[20%]" alt="project"/>
-                      </>
-                    ) : (
-                      <>
-                        <img src={projectBackgroundImage} className="w-[55vh] transform rotate-180" alt="background-project"/>
-                        <img src={image} className="rounded-full w-[45vh] aspect-square -top-[115%] left-[10%] transform -translate-y-[115%] -translate-x-[10%]"  alt="project"/>
-                      </>
-                    )
-                  }
+                  <img src={projectBackgroundImage} className={`w-[55vh] ${variations[variation].background}`} alt="background-project"/>
+                  <img src={image} className={`rounded-full w-[45vh] aspect-square ${variations[variation].foreground}`} alt="project"/>
                 </Row>
               </Column>
             </Row>

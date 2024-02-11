@@ -21,8 +21,12 @@ function App() {
               <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="mt-7">Saiba Mais</CustomButton></a>
             </Column>
             <Column w={3}>
-              <img src={require('../assets/img/lavagifs/lava_prop_2.gif')} alt="gif" className="ms-9 transform -rotate-45 w-[7rem]"/>
-              <img src={require('../assets/img/lavagifs/lava_prop_4.gif')} alt="gif" className="w-[20rem] transform -ms-10 -mt-10"/>
+              <video className="ms-9 transform -rotate-45 w-[7rem]" autoPlay loop muted>
+                <source src={require('../assets/img/lavagifs/lava_prop_2.webm')} type="video/webm" />
+              </video>
+              <video className="w-[20rem] transform -ms-10 -mt-10" autoPlay loop muted>
+                <source src={require('../assets/img/lavagifs/lava_prop_4.webm')} type="video/webm" />
+              </video>
             </Column>
           </Row>
         </GradientSection>
@@ -31,8 +35,12 @@ function App() {
           <Row className="pt-32 px-28">
             <Column w={6}>
               <h3 className="text-fuchsia-500 lastica text-xl font-bold">Um pequeno resumo...</h3>
-              <img src={require('../assets/img/lavagifs/lava_prop_1.gif')} alt="gif" className="ms-24 mt-10 transform rotate-[260deg] w-[12rem]"/>
-              <img src={require('../assets/img/lavagifs/lava_prop_3.gif')} alt="gif" className="ms-1 -mt-80 transform rotate-[75deg] w-[12rem]"/>
+              <video className="ms-24 mt-10 transform rotate-[260deg] w-[12rem]" autoPlay loop muted>
+                <source src={require('../assets/img/lavagifs/lava_prop_1.webm')} type="video/webm" />
+              </video>
+              <video className="ms-1 -mt-80 transform rotate-[75deg] w-[12rem]" autoPlay loop muted>
+                <source src={require('../assets/img/lavagifs/lava_prop_3.webm')} type="video/webm" />
+              </video>
             </Column>
             <Column w={6}>
               <p className="text-white tt-interfaces text-3xl">
@@ -91,15 +99,17 @@ function App() {
                 <div className="flex p-6 border border-white border-solid border-1.5 w-4/5">
                   <h5 className="lastica text-white text-2xl">SOCIAL</h5>
                   <Row className="ms-auto" gap="1rem">
-                    <a href="#github" className="ms-4"><GitHubIcon style={{color: "white"}} fontSize="large"/></a>
-                    <a href="#linkedin"><LinkedInIcon style={{color: "white"}} fontSize="large"/></a>
-                    <a href="#instagram"><InstagramIcon style={{color: "white"}} fontSize="large"/></a>
+                    <a href="https://github.com/micaelmz" target="_blank" className="ms-4"><GitHubIcon style={{color: "white"}} fontSize="large"/></a>
+                    <a href="https://www.linkedin.com/in/micaelmuniz/" target="_blank"><LinkedInIcon style={{color: "white"}} fontSize="large"/></a>
+                    <a href="https://www.instagram.com/micaelmz/" target="_blank"><InstagramIcon style={{color: "white"}} fontSize="large"/></a>
                   </Row>
                 </div>
               </Row>
             </Column>
             <Column w={6}>
-              <img src={require('../assets/img/lavagifs/lava_prop_6.gif')} alt="gif" className="ms-auto w-[80%]"/>
+              <video className="ms-auto w-[80%]" autoPlay loop muted>
+                <source src={require('../assets/img/lavagifs/lava_prop_6.webm')} type="video/webm" />
+              </video>
             </Column>
           </Row>
         </GradientSection>

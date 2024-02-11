@@ -10,7 +10,6 @@ export default function ProjectCard({title, description, url, image, variation})
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const projectBackgroundImage = require('../assets/img/lavagifs/lava_prop_5.gif');
   const variations = {
     right: {
       background: "",
@@ -57,7 +56,9 @@ export default function ProjectCard({title, description, url, image, variation})
               </Column>
               <Column w={6}>
                 <Row className="justify-end">
-                  <img src={projectBackgroundImage} className={`w-[55vh] ${variations[variation].background}`} alt="background-project"/>
+                  <video className={`w-[55vh] ${variations[variation].background}`} autoPlay loop muted>
+                    <source src={require('../assets/img/lavagifs/lava_prop_5.webm')} type="video/webm" />
+                  </video>
                   <img src={image} className={`rounded-full w-[45vh] aspect-square ${variations[variation].foreground}`} alt="project"/>
                 </Row>
               </Column>

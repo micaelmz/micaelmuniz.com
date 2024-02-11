@@ -3,70 +3,112 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Lastica";
-  src: url("assets/fonts/Lastica.woff2");
+    font-family: "Lastica";
+    src: url("assets/fonts/Lastica.woff2");
 }
 
 @font-face {
-  font-family: "TT Interfaces";
-  src: url("assets/fonts/TT_Interfaces.woff2");
+    font-family: "TT Interfaces";
+    src: url("assets/fonts/TT_Interfaces.woff2");
 }
 
 .lastica {
-  font-family: "Lastica", sans-serif;
+    font-family: "Lastica", sans-serif;
 }
+
 .tt-interfaces {
-  font-family: "TT Interfaces", sans-serif;
+    font-family: "TT Interfaces", sans-serif;
 }
 
 .gradient-up {
-  background-image: linear-gradient(to bottom, #3f1e5a 0%, #2e1f3b 100%);
+    background-image: linear-gradient(to bottom, #3f1e5a 0%, #2e1f3b 100%);
 }
-.gradient-blue{
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, transparent 0%, transparent 40%, rgba(38, 81, 150, 0.5) 100%);
+
+.gradient-blue {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, transparent 40%, rgba(38, 81, 150, 0.5) 100%);
 }
 
 .gradient-down {
-  background: linear-gradient(180deg, #2e1f3b 0%, #3f1e5a 100%);
+    background: linear-gradient(180deg, #2e1f3b 0%, #3f1e5a 100%);
 }
 
-.project-modal{
-  padding: 2%;
-  position: absolute;
-  background-image: linear-gradient(to bottom, #3f1e5a 0%, #2e1f3b 100%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw;
-  height: 80vh;
-  box-shadow: black;
+.project-modal {
+    padding: 2%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #3f1e5a 0%, #2e1f3b 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    box-shadow: black;
 }
 
 .modal-text-box {
-  border: 1.5px solid white;
-  padding: 7.5%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 60%;
+    border: 1.5px solid transparent; /* Começa com borda transparente */
+    padding: 7.5%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    transition: border-color 0.25s ease-out; /* Transição para a cor da borda */
+}
+
+.modal-text-box::before,
+.modal-text-box::after {
+    content: "";
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.modal-text-box::before {
+    top: 0;
+    left: 0;
+}
+
+.modal-text-box::after {
+    bottom: 0;
+    right: 0;
+}
+
+.modal-text-box.draw::before,
+.modal-text-box.draw::after {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-text-box.draw::before {
+    border-top-color: white;
+    border-right-color: white;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.modal-text-box.draw::after {
+    border-bottom-color: white;
+    border-left-color: white;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
 
 .custom-button {
-  border: none;
-  padding: 0.8rem 2rem; /* Padding */
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: "TT Interfaces", sans-serif;
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-  font-size: 0.8rem;
-  cursor: pointer;
-  border-radius: 0.7rem;
+    border: none;
+    padding: 0.8rem 2rem; /* Padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "TT Interfaces", sans-serif;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 0.7rem;
 }
-.custom-button:hover{
-  filter: brightness(0.8);
+
+.custom-button:hover {
+    filter: brightness(0.8);
 }

@@ -36,7 +36,7 @@ export default function ProjectCard({title, description, url, image, variation})
             </Row>
             <Row className="ms-10 h-full">
               <Column w={6}>
-                <div className="modal-text-box">
+                <div className={open ? 'modal-text-box draw' : 'modal-text-box'}>
                   <h1 className="text-white lastica text-4xl">{title}</h1>
                   <p className="text-white tt-interfaces">
                     {description}

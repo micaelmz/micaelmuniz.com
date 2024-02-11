@@ -62,21 +62,21 @@ function App() {
                 title="Rovena"
                 description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
                 url="https://teste.com"
-                image={require('../assets/img/sample.jpg')}
+                image="https://placehold.it/500x500"
                 variation="right"
             />
             <ProjectCard
                 title="Rovena2"
                 description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
                 url="https://teste.com"
-                image={require('../assets/img/sample.jpg')}
+                image="https://placehold.it/500x500"
                 variation="left"
             />
             <ProjectCard
                 title="Rovena3"
                 description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
                 url="https://teste.com"
-                image={require('../assets/img/sample.jpg')}
+                image="https://placehold.it/500x500"
                 variation="right"
             />
           </Row>

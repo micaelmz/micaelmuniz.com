@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import CustomButton from "./CustomButton";
 import {Column, Row} from "./layout";
 import {Modal} from "@mui/material";
@@ -7,8 +7,17 @@ import CloseIcon from '@mui/icons-material/Close';
 export default function ProjectCard({title, description, url, image, variation}) {
 
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [draw, setDraw] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+    setTimeout(() => {
+      setDraw(true);
+    }, 250);
+  };
+  const handleClose = () => {
+    setOpen(false);
+    setDraw(false);
+  };
 
   const variations = {
     right: {
@@ -30,13 +39,13 @@ export default function ProjectCard({title, description, url, image, variation})
         </div>
 
         <Modal open={open}>
-          <div className="project-modal">
+          <div className="project-modal fade-in">
             <Row className="justify-end">
               <CloseIcon onClick={handleClose} sx={{cursor: "pointer", color: "red"}} fontSize="large"/>
             </Row>
             <Row className="ms-10 h-full">
               <Column w={6}>
-                <div className={open ? 'modal-text-box draw' : 'modal-text-box'}>
+                <div className={`modal-text-box ${draw ? 'draw' : ''}`} id="modal-text-box">
                   <h1 className="text-white lastica text-4xl">{title}</h1>
                   <p className="text-white tt-interfaces">
                     {description}

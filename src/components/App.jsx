@@ -7,6 +7,7 @@ import CustomButton from "./CustomButton";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import {TypeAnimation} from "react-type-animation";
 
 function App() {
 
@@ -17,7 +18,21 @@ function App() {
           <Row className="pt-24">
             <Column w={9} className="ps-28 pt-24">
               <h1 className="text-white lastica text-5xl font-bold">Olá, sou Micael Muniz</h1>
-              <p className="text-white tt-interfaces text-2xl mt-5 tracking-wider">e sou Desenvolvedor Full Stack</p>
+              <TypeAnimation
+                  sequence={[
+                    'e sou Desenvolvedor Full Stack',
+                    1000,
+                    'e sou Desenvolvedor Python',
+                    1000,
+                    'e sou Desenvolvedor JavaScript',
+                    1000,
+                    'e sou Desenvolvedor Freelancer',
+                    1000
+                  ]}
+                  speed={50}
+                  className="text-white tt-interfaces text-2xl mt-5 tracking-wider block"
+                  repeat={Infinity}
+              />
               <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="mt-7">Saiba Mais</CustomButton></a>
             </Column>
             <Column w={3}>
@@ -86,7 +101,7 @@ function App() {
           <Row className="py-24 px-28 h-full">
             <Column w={6} className="h-full">
               <Row className="flex-col justify-between relative h-full">
-                <h2 className="tt-interfaces text-3xl text-white font-bold tracking-wider">Vamos conversar</h2>
+                <h2 className="tt-interfaces text-3xl text-white font-bold tracking-wider">Entre em contato</h2>
 
                 <div>
                   <h4 className="lastica text-white text-xl mb-2">EMAIL</h4>

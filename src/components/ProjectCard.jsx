@@ -31,13 +31,14 @@ export default function ProjectCard({title, description, url, image, variation})
   }
 
   return (
-      <div className="h-[40vh] w-[47vh] bg-white flex items-center justify-center text-fuchsia-500 hover:bg-fuchsia-500 hover:text-white">
-
-        <div className="text-center">
-          <p className="my-10 block lastica text-4xl">{title}</p>
-          <CustomButton onClick={handleOpen} backgroundColor="#2c1e4a" textColor="white">Saiba Mais</CustomButton>
+      // todo: em caso de hover aplicar a foto do projeto com um filtro rosa como background, uma ideia é criar uma nova div já com esse background mas com opacity 0 e ao passar o mouse aplicar um transition para opacity 1
+      <>
+        <div className="h-[40vh] w-[47vh] bg-white flex items-center justify-center text-fuchsia-500 hover:bg-fuchsia-500 hover:text-white transition-all duration-300 ease-in-out">
+          <div className="text-center">
+            <p className="my-10 block lastica text-4xl">{title}</p>
+            <CustomButton onClick={handleOpen} backgroundColor="#2c1e4a" textColor="white">Saiba Mais</CustomButton>
+          </div>
         </div>
-
         <Modal open={open}>
           <div className="project-modal fade-in">
             <Row className="justify-end">
@@ -66,7 +67,7 @@ export default function ProjectCard({title, description, url, image, variation})
               <Column w={6}>
                 <Row className="justify-end">
                   <video className={`w-[55vh] ${variations[variation].background}`} autoPlay loop muted>
-                    <source src={require('../assets/img/lavagifs/lava_prop_5.webm')} type="video/webm" />
+                    <source src={require('../assets/img/lavagifs/lava_prop_5.webm')} type="video/webm"/>
                   </video>
                   <img src={image} className={`rounded-full w-[45vh] aspect-square ${variations[variation].foreground}`} alt="project"/>
                 </Row>
@@ -74,6 +75,6 @@ export default function ProjectCard({title, description, url, image, variation})
             </Row>
           </div>
         </Modal>
-      </div>
+      </>
   )
 }

@@ -17,7 +17,7 @@ function App() {
         <GradientSection index={0} id="home">
           <Row className="pt-24">
             <Column w={9} className="ps-28 pt-24">
-              <h1 className="text-white lastica text-5xl font-bold">Olá, sou Micael Muniz</h1>
+              <h1 className="text-white lastica text-5xl font-bold mt-5">Olá, sou Micael Muniz</h1>
               <TypeAnimation
                   sequence={[
                     'e sou Desenvolvedor Full Stack',
@@ -33,10 +33,10 @@ function App() {
                   className="text-white tt-interfaces text-2xl mt-5 tracking-wider block"
                   repeat={Infinity}
               />
-              <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="mt-7">Saiba Mais</CustomButton></a>
+              <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="mt-10 w-[10rem]">Saiba Mais</CustomButton></a>
             </Column>
             <Column w={3}>
-              <video className="ms-9 transform -rotate-45 w-[7rem]" autoPlay loop muted>
+              <video className="transform -rotate-45 w-[7rem]" autoPlay loop muted>
                 <source src={require('../assets/img/lavagifs/lava_prop_2.webm')} type="video/webm" />
               </video>
               <video className="w-[20rem] transform -ms-10 -mt-10" autoPlay loop muted>
@@ -105,10 +105,10 @@ function App() {
 
                 <div>
                   <h4 className="lastica text-white text-xl mb-2">EMAIL</h4>
-                  <p className="tt-interfaces text-white text-xl tracking-wider mb-10">contato@micaelmuniz.com</p>
+                  <a href="mailto:contato@micaelmuniz.com"><p className="tt-interfaces text-white text-xl tracking-wider mb-10">contato@micaelmuniz.com</p></a>
 
-                  <h4 className="lastica text-white text-xl mb-2">TELEFONE</h4>
-                  <p className="tt-interfaces text-white text-xl tracking-wider">(11) 99999-9999</p>
+                  <h4 className="lastica text-white text-xl mb-2">WHATSAPP</h4>
+                  <a href="whatsapp://send?phone=551140402024"><p className="tt-interfaces text-white text-xl tracking-wider">(11) 4040-2024</p></a>
                 </div>
 
                 <div className="flex p-6 border border-white border-solid border-1.5 w-4/5">

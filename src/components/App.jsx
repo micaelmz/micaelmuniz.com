@@ -17,7 +17,8 @@ function App() {
         <GradientSection index={0} id="home">
           <Row className="pt-24">
             <Column w={9} className="ps-28 pt-24">
-              <h1 className="text-white lastica text-5xl font-bold mt-5">Olá, sou Micael Muniz</h1>
+              <h1 className="text-white text-nowrap lastica font-bold mt-5 xl:text-[52px] lg:text-[44px] md:text-[33px] sm:text-[26px] text-[20px]">
+                Olá, sou Micael Muniz</h1>
               <TypeAnimation
                   sequence={[
                     'e sou Desenvolvedor Full Stack',
@@ -30,16 +31,16 @@ function App() {
                     1000
                   ]}
                   speed={50}
-                  className="text-white tt-interfaces text-2xl mt-5 tracking-wider block"
+                  className="text-white tt-interfaces mt-5 tracking-wider block xl:text-2xl lg:text-xl md:text-lg sm:text-md"
                   repeat={Infinity}
               />
               <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="mt-10 w-[10rem]">Saiba Mais</CustomButton></a>
             </Column>
             <Column w={3}>
-              <video className="transform -rotate-45 w-[7rem]" autoPlay loop muted>
+              <video className="transform -rotate-45 xl:w-[7rem] lg:w-[6rem] md:w-[5rem] sm:w-[4rem] w-[3rem]" autoPlay loop muted>
                 <source src={require('../assets/img/lavagifs/lava_prop_2.webm')} type="video/webm" />
               </video>
-              <video className="w-[20rem] transform -ms-10 -mt-10" autoPlay loop muted>
+              <video className="transform -ms-10 -mt-10 xl:w-[20rem] lg:w-[18rem] md:w-[16rem] sm:w-[14rem] w-[12rem]" autoPlay loop muted>
                 <source src={require('../assets/img/lavagifs/lava_prop_4.webm')} type="video/webm" />
               </video>
             </Column>
@@ -98,11 +99,10 @@ function App() {
         </GradientSection>
 
         <GradientSection index={3} id="contact">
-          <Row className="py-24 px-28 h-full">
-            <Column w={6} className="h-full">
+          <Row className="py-24 px-28">
+            <Column w={6} >
               <Row className="flex-col justify-between relative h-full">
                 <h2 className="tt-interfaces text-3xl text-white font-bold tracking-wider">Entre em contato</h2>
-
                 <div>
                   <h4 className="lastica text-white text-xl mb-2">EMAIL</h4>
                   <a href="mailto:contato@micaelmuniz.com"><p className="tt-interfaces text-white text-xl tracking-wider mb-10">contato@micaelmuniz.com</p></a>

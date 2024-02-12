@@ -33,9 +33,9 @@ export default function ProjectCard({title, description, url, image, variation})
   return (
       // todo: em caso de hover aplicar a foto do projeto com um filtro rosa como background, uma ideia é criar uma nova div já com esse background mas com opacity 0 e ao passar o mouse aplicar um transition para opacity 1
       <>
-        <div className="h-[40vh] w-[47vh] bg-white flex items-center justify-center text-fuchsia-500 hover:bg-fuchsia-500 hover:text-white transition-all duration-300 ease-in-out">
+        <div className="bg-white flex items-center justify-center text-fuchsia-500 hover:bg-fuchsia-500 hover:text-white transition-all duration-300 ease-in-out w-[30%] aspect-[9/8]">
           <div className="text-center">
-            <p className="my-10 block lastica text-4xl">{title}</p>
+            <p className="my-10 block lastica lg:text-3xl md:text-2xl sm:text-xl">{title}</p>
             <CustomButton onClick={handleOpen} backgroundColor="#2c1e4a" textColor="white">Saiba Mais</CustomButton>
           </div>
         </div>

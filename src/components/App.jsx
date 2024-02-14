@@ -1,6 +1,7 @@
 import React from 'react';
+import {Row, Col, Container} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
-import {Row, Column} from "./layout";
 import GradientSection from "./GradientSection";
 import ProjectCard from "./ProjectCard";
 import CustomButton from "./CustomButton";
@@ -14,90 +15,111 @@ function App() {
   return (
       <>
 
-        <GradientSection index={0} id="home">
-          <Row className="pt-24">
-            <Column w={9} className="ps-28 pt-24">
-              <h1 className="text-white text-nowrap lastica font-bold mt-5 xl:text-[52px] lg:text-[44px] md:text-[33px] sm:text-[26px] text-[20px]">
-                Olá, sou Micael Muniz</h1>
-              <TypeAnimation
-                  sequence={[
-                    'e sou Desenvolvedor Full Stack',
-                    1000,
-                    'e sou Desenvolvedor Python',
-                    1000,
-                    'e sou Desenvolvedor JavaScript',
-                    1000,
-                    'e sou Desenvolvedor Freelancer',
-                    1000
-                  ]}
-                  speed={50}
-                  className="text-white tt-interfaces mt-5 tracking-wider block xl:text-2xl lg:text-xl md:text-lg sm:text-md"
-                  repeat={Infinity}
+        <GradientSection index={0} id="home" height="lg:h-[650px] h-[500px]">
+          <Container>
+            <Row className="lg:pt-24 lg:pl-14 pl-2">
+              <Col lg={9} sm={12} className="pt-28">
+                <h1 className="text-white text-nowrap lastica font-bold lg:text-[44px] text-[30px]">
+                  <span className="lg:hidden block">Olá, sou </span>
+                  <span className="lg:inline hidden">Olá, sou </span>
+                  Micael Muniz</h1>
+                <TypeAnimation
+                    sequence={[
+                      'e sou Desenvolvedor Full Stack',
+                      1000,
+                      'e sou Desenvolvedor Python',
+                      1000,
+                      'e sou Desenvolvedor JavaScript',
+                      1000,
+                      'e sou Desenvolvedor Freelancer',
+                      1000
+                    ]}
+                    speed={50}
+                    className="text-white tt-interfaces lg:mt-5 mt-3 tracking-wider block lg:text-xl text-lg"
+                    repeat={Infinity}
+                />
+                <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="lg:mt-10 mt-14 w-[10rem]">Saiba Mais</CustomButton></a>
+              </Col>
+              <Col lg={3} sm={12}>
+                <video className="transform lg:-rotate-45 -rotate-[24deg] lg:w-[6rem] w-[3.5rem] lg:-mt-0 -mt-56 lg:ml-0 ml-auto mr-2" autoPlay loop muted>
+                  <source src={require('../assets/img/lavagifs/lava_prop_2.webm')} type="video/webm"/>
+                </video>
+                <video className="transform -ms-10 -mt-10 lg:w-[18rem] lg:flex hidden" autoPlay loop muted>
+                  <source src={require('../assets/img/lavagifs/lava_prop_4.webm')} type="video/webm"/>
+                </video>
+              </Col>
+            </Row>
+          </Container>
+        </GradientSection>
+
+
+        <GradientSection index={1} id="about" height="lg:h-[650px] h-[630px]">
+          <Container>
+            <Row className="lg:pt-32 pt-10 px-2">
+              <h3 className="text-fuchsia-500 lastica text-xl font-bold lg:-mb-10 mb-3">Um pequeno resumo...</h3>
+              <Col lg={{ span: 6, order: 1}} xs={{ span: 12, order: 2}}>
+                <div className="mb-4">
+                  <video className="lg:ms-24 ms-36 lg:mt-10 mt-5 transform rotate-[260deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted>
+                    <source src={require('../assets/img/lavagifs/lava_prop_1.webm')} type="video/webm"/>
+                  </video>
+                  <video className="lg:ms-3 ms-16 lg:-mt-80 -mt-56 transform rotate-[75deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted>
+                    <source src={require('../assets/img/lavagifs/lava_prop_3.webm')} type="video/webm"/>
+                  </video>
+                </div>
+              </Col>
+              <Col lg={{ span: 6, order: 2}} xs={{ span: 12, order: 1}}>
+                <p className="text-white tt-interfaces lg:text-3xl text-xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </GradientSection>
+
+
+        <GradientSection index={2} id="projects" height="lg:h-[600px] h-[1230px]">
+
+          <div className="flex">
+            <hr className="w-2/3 mx-auto text-white"></hr>
+          </div>
+
+          <Container>
+            <Row className="pl-2 lg:pt-24 pt-5">
+              <h1 className="text-white lastica text-4xl font-semibold">
+                Projetos <span className="lg:inline hidden">em que atuei</span>
+              </h1>
+              <p className="text-white tt-interfaces mt-4 tracking-wider">Minha experiência em projetos pessoais, acadêmicos e de freelancer.</p>
+            </Row>
+            <div className="lg:flex block lg:mx-28 mx-3 align-middle justify-between mt-10">
+              <ProjectCard
+                  title="Exemplo"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  url="https://teste.com"
+                  image="https://placehold.it/500x500"
+                  variation="right"
               />
-              <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="mt-10 w-[10rem]">Saiba Mais</CustomButton></a>
-            </Column>
-            <Column w={3}>
-              <video className="transform -rotate-45 xl:w-[7rem] lg:w-[6rem] md:w-[5rem] sm:w-[4rem] w-[3rem]" autoPlay loop muted>
-                <source src={require('../assets/img/lavagifs/lava_prop_2.webm')} type="video/webm" />
-              </video>
-              <video className="transform -ms-10 -mt-10 xl:w-[20rem] lg:w-[18rem] md:w-[16rem] sm:w-[14rem] w-[12rem]" autoPlay loop muted>
-                <source src={require('../assets/img/lavagifs/lava_prop_4.webm')} type="video/webm" />
-              </video>
-            </Column>
-          </Row>
+              <ProjectCard
+                  title="Exemplo2"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  url="https://teste.com"
+                  image="https://placehold.it/500x500"
+                  variation="left"
+              />
+              <ProjectCard
+                  title="Exemplo3"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                  url="https://teste.com"
+                  image="https://placehold.it/500x500"
+                  variation="right"
+              />
+
+            </div>
+          </Container>
         </GradientSection>
 
-        <GradientSection index={1} id="about">
-          <Row className="pt-32 px-28">
-            <Column w={6}>
-              <h3 className="text-fuchsia-500 lastica text-xl font-bold">Um pequeno resumo...</h3>
-              <video className="ms-24 mt-10 transform rotate-[260deg] w-[12rem]" autoPlay loop muted>
-                <source src={require('../assets/img/lavagifs/lava_prop_1.webm')} type="video/webm" />
-              </video>
-              <video className="ms-1 -mt-80 transform rotate-[75deg] w-[12rem]" autoPlay loop muted>
-                <source src={require('../assets/img/lavagifs/lava_prop_3.webm')} type="video/webm" />
-              </video>
-            </Column>
-            <Column w={6}>
-              <p className="text-white tt-interfaces text-3xl">
-                Sou um estudante de Engenharia de Computação e Técnico em Informática de 22 anos. Tenho um grande interesse em Desenvolvimento e Inteligência
-                Artificial.
-              </p>
-            </Column>
-          </Row>
-        </GradientSection>
-
-        <GradientSection index={2} id="projects">
-          <hr className="w-2/3 mx-auto"></hr>
-          <Row className="pt-24 px-28">
-            <h1 className="text-white lastica text-4xl font-semibold">Projetos em que atuei</h1>
-            <p className="text-white tt-interfaces mt-4 tracking-wider">Minha experiência em projetos pessoais, acadêmicos e de freelancer.</p>
-          </Row>
-          <Row className="mx-28 align-middle justify-between mt-10">
-            <ProjectCard
-                title="Rovena"
-                description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
-                url="https://teste.com"
-                image="https://placehold.it/500x500"
-                variation="right"
-            />
-            <ProjectCard
-                title="Rovena2"
-                description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
-                url="https://teste.com"
-                image="https://placehold.it/500x500"
-                variation="left"
-            />
-            <ProjectCard
-                title="Rovena3"
-                description="Rovena é um software de combate ao cibercrime que monitora redes sociais e utiliza inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais."
-                url="https://teste.com"
-                image="https://placehold.it/500x500"
-                variation="right"
-            />
-          </Row>
-        </GradientSection>
-
+        {/*
         <GradientSection index={3} id="contact">
           <Row className="py-24 px-28">
             <Column w={6} >
@@ -128,7 +150,7 @@ function App() {
             </Column>
           </Row>
         </GradientSection>
-
+        */}
       </>
   );
 }

@@ -34,6 +34,15 @@
     background: linear-gradient(180deg, #2e1f3b 0%, #3f1e5a 100%);
 }
 
+.project-card{
+    background-color: white;
+    color: rgb(217 70 239);
+}
+.project-card:hover{
+    background-color: rgb(217 70 239);
+    color: white;
+}
+
 .project-modal {
     padding: 2%;
     position: absolute;
@@ -41,8 +50,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
     box-shadow: black;
 }
 
@@ -55,7 +62,7 @@
         opacity: 0;
     }
     to {
-        opacity: 1;
+        opacity: 0.9;
     }
 }
 
@@ -66,7 +73,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60%;
     transition: border-color 0.25s ease-out; /* Transição para a cor da borda */
 }
 

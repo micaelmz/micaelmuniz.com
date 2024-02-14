@@ -12,6 +12,10 @@
     src: url("assets/fonts/TT_Interfaces.woff2");
 }
 
+video{
+    opacity: 0.95;
+}
+
 .lastica {
     font-family: "Lastica", sans-serif;
 }

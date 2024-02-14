@@ -15,10 +15,10 @@ function App() {
   return (
       <>
 
-        <GradientSection index={0} id="home" height="lg:h-[650px] h-[500px]">
+        <GradientSection index={0} id="home" height="lg:h-[650px] h-[725px]">
           <Container>
             <Row className="lg:pt-24 lg:pl-14 pl-2">
-              <Col lg={9} sm={12} className="pt-28">
+              <Col lg={9} xs={12} className="pt-28 lg:mt-0 mt-16">
                 <h1 className="text-white text-nowrap lastica font-bold lg:text-[44px] text-[30px]">
                   <span className="lg:hidden block">Olá, sou </span>
                   <span className="lg:inline hidden">Olá, sou </span>
@@ -38,13 +38,15 @@ function App() {
                     className="text-white tt-interfaces lg:mt-5 mt-3 tracking-wider block lg:text-xl text-lg"
                     repeat={Infinity}
                 />
-                <a href="#about"><CustomButton backgroundColor="#d63cbd" textColor="white" className="lg:mt-10 mt-14 w-[10rem]">Saiba Mais</CustomButton></a>
+                <div className="flex lg:justify-normal justify-center lg:mt-10 mt-20">
+                  <a href="#contact"><CustomButton backgroundColor="#d63cbd" textColor="white" className="w-[13rem]">Entrar em contato</CustomButton></a>
+                </div>
               </Col>
-              <Col lg={3} sm={12}>
-                <video className="transform lg:-rotate-45 -rotate-[24deg] lg:w-[6rem] w-[3.5rem] lg:-mt-0 -mt-56 lg:ml-0 ml-auto mr-2" autoPlay loop muted>
+              <Col lg={3} xs={12}>
+                <video className="transform -rotate-45 w-[6rem] mr-2 lg:flex hidden" autoPlay loop muted>
                   <source src={require('../assets/img/lavagifs/lava_prop_2.webm')} type="video/webm"/>
                 </video>
-                <video className="transform -ms-10 -mt-10 lg:w-[18rem] lg:flex hidden" autoPlay loop muted>
+                <video className="transform lg:-ms-10 lg:-mt-10 m-[auto] lg:w-[18rem] w-[12rem] lg:my-0 mt-20" autoPlay loop muted>
                   <source src={require('../assets/img/lavagifs/lava_prop_4.webm')} type="video/webm"/>
                 </video>
               </Col>
@@ -54,10 +56,10 @@ function App() {
 
 
         <GradientSection index={1} id="about" height="lg:h-[650px] h-[630px]">
-          <Container>
-            <Row className="lg:pt-32 pt-10 px-2">
+          <Container className="lg:mx-28 mr-1 ml-1">
+            <Row className="lg:pt-32 pt-10 ">
               <h3 className="text-fuchsia-500 lastica text-xl font-bold lg:-mb-10 mb-3">Um pequeno resumo...</h3>
-              <Col lg={{ span: 6, order: 1}} xs={{ span: 12, order: 2}}>
+              <Col lg={{span: 6, order: 1}} xs={{span: 12, order: 2}}>
                 <div className="mb-4">
                   <video className="lg:ms-24 ms-36 lg:mt-10 mt-5 transform rotate-[260deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted>
                     <source src={require('../assets/img/lavagifs/lava_prop_1.webm')} type="video/webm"/>
@@ -67,7 +69,7 @@ function App() {
                   </video>
                 </div>
               </Col>
-              <Col lg={{ span: 6, order: 2}} xs={{ span: 12, order: 1}}>
+              <Col lg={{span: 6, order: 2}} xs={{span: 12, order: 1}}>
                 <p className="text-white tt-interfaces lg:text-3xl text-xl">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -85,8 +87,8 @@ function App() {
             <hr className="w-2/3 mx-auto text-white"></hr>
           </div>
 
-          <Container>
-            <Row className="pl-2 lg:pt-24 pt-5">
+          <Container className="lg:mx-28 mr-1 ml-1">
+            <Row className="lg:pt-24 pt-5">
               <h1 className="text-white lastica text-4xl font-semibold">
                 Projetos <span className="lg:inline hidden">em que atuei</span>
               </h1>
@@ -119,38 +121,41 @@ function App() {
           </Container>
         </GradientSection>
 
-        {/*
-        <GradientSection index={3} id="contact">
-          <Row className="py-24 px-28">
-            <Column w={6} >
-              <Row className="flex-col justify-between relative h-full">
-                <h2 className="tt-interfaces text-3xl text-white font-bold tracking-wider">Entre em contato</h2>
-                <div>
-                  <h4 className="lastica text-white text-xl mb-2">EMAIL</h4>
-                  <a href="mailto:contato@micaelmuniz.com"><p className="tt-interfaces text-white text-xl tracking-wider mb-10">contato@micaelmuniz.com</p></a>
+        <GradientSection index={3} id="contact" height="lg:h-[615px] h-[825px]">
+          <Container className="lg:px-20 pr-5 pl-5">
+            <Row className="pt-24 pb-5">
+              <Col lg={6} xs={12}>
+                <Row className="flex-col justify-between relative h-full">
+                  <h2 className="tt-interfaces text-3xl text-fuchsia-500 font-bold tracking-wider lg:mb-0 mb-16">Entre em contato</h2>
+                  <div>
+                    <h4 className="lastica text-white text-xl mb-2">EMAIL</h4>
+                    <a href="mailto:contato@micaelmuniz.com"><p className="tt-interfaces text-white text-xl tracking-wider">contato@micaelmuniz.com</p>
+                    </a>
 
-                  <h4 className="lastica text-white text-xl mb-2">WHATSAPP</h4>
-                  <a href="whatsapp://send?phone=551140402024"><p className="tt-interfaces text-white text-xl tracking-wider">(11) 4040-2024</p></a>
-                </div>
+                    <h4 className="lastica text-white text-xl mb-2 mt-5">TELEFONE</h4>
+                    <a href="whatsapp://send?phone=551140402024"><p className="tt-interfaces text-white text-xl tracking-wider">(11) 4040-2024</p></a>
+                  </div>
 
-                <div className="flex p-6 border border-white border-solid border-1.5 w-4/5">
-                  <h5 className="lastica text-white text-2xl">SOCIAL</h5>
-                  <Row className="ms-auto" gap="1rem">
-                    <a href="https://github.com/micaelmz" target="_blank" className="ms-4"><GitHubIcon style={{color: "white"}} fontSize="large"/></a>
-                    <a href="https://www.linkedin.com/in/micaelmuniz/" target="_blank"><LinkedInIcon style={{color: "white"}} fontSize="large"/></a>
-                    <a href="https://www.instagram.com/micaelmz/" target="_blank"><InstagramIcon style={{color: "white"}} fontSize="large"/></a>
-                  </Row>
+                  <div className="flex p-6 border border-white border-solid border-1.5 lg:w-4/5 w-[94%] lg:mx-3 ml-auto mr-auto lg:mt-0 mt-9">
+                    <h5 className="lastica text-white text-2xl">SOCIAL</h5>
+                    <div className="flex ms-auto gap-3">
+                      <a href="https://github.com/micaelmz" target="_blank" className="ms-4"><GitHubIcon style={{color: "white"}} fontSize="large"/></a>
+                      <a href="https://www.linkedin.com/in/micaelmuniz/" target="_blank"><LinkedInIcon style={{color: "white"}} fontSize="large"/></a>
+                      <a href="https://www.instagram.com/micaelmz/" target="_blank"><InstagramIcon style={{color: "white"}} fontSize="large"/></a>
+                    </div>
+                  </div>
+                </Row>
+              </Col>
+              <Col lg={6} xs={12}>
+                <div className="flex justify-center">
+                  <video className="lg:w-[80%] w-[70%]" autoPlay loop muted>
+                    <source src={require('../assets/img/lavagifs/lava_prop_6.webm')} type="video/webm"/>
+                  </video>
                 </div>
-              </Row>
-            </Column>
-            <Column w={6}>
-              <video className="ms-auto w-[80%]" autoPlay loop muted>
-                <source src={require('../assets/img/lavagifs/lava_prop_6.webm')} type="video/webm" />
-              </video>
-            </Column>
-          </Row>
+              </Col>
+            </Row>
+          </Container>
         </GradientSection>
-        */}
       </>
   );
 }

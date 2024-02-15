@@ -16,8 +16,8 @@ function App() {
       <>
 
         <GradientSection index={0} id="home" height="lg:h-[650px] h-[725px]">
-          <Container>
-            <Row className="lg:pt-24 lg:pl-14 pl-2">
+          <div className="lg:mx-32 mx-6">
+            <Row className="lg:pt-24">
               <Col lg={9} xs={12} className="pt-28 lg:mt-0 mt-16">
                 <h1 className="text-white text-nowrap lastica font-bold lg:text-[44px] text-[30px]">
                   <span className="lg:hidden block">Olá, sou </span>
@@ -51,12 +51,12 @@ function App() {
                 </video>
               </Col>
             </Row>
-          </Container>
+          </div>
         </GradientSection>
 
 
         <GradientSection index={1} id="about" height="lg:h-[650px] h-[630px]">
-          <Container className="lg:mx-28 mr-1 ml-1">
+          <div className="lg:mx-32 mx-6">
             <Row className="lg:pt-32 pt-10 ">
               <h3 className="text-fuchsia-500 lastica text-xl font-bold lg:-mb-10 mb-3">Um pequeno resumo...</h3>
               <Col lg={{span: 6, order: 1}} xs={{span: 12, order: 2}}>
@@ -71,13 +71,11 @@ function App() {
               </Col>
               <Col lg={{span: 6, order: 2}} xs={{span: 12, order: 1}}>
                 <p className="text-white tt-interfaces lg:text-3xl text-xl">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur.
+                  Sou um estudante de Engenharia de Computação e Técnico em Informática aspirante a desenvolvedor em busca de minha primeira oportunidade profissional. Sou apaixonado por projetos de engenharia que impulsionam o progresso humano e almejo fazer minhas próprias contribuições no futuro.
                 </p>
               </Col>
             </Row>
-          </Container>
+          </div>
         </GradientSection>
 
 
@@ -87,7 +85,7 @@ function App() {
             <hr className="w-2/3 mx-auto text-white"></hr>
           </div>
 
-          <Container className="lg:mx-28 mr-1 ml-1">
+          <div className="lg:mx-32 mx-6">
             <Row className="lg:pt-24 pt-5">
               <h1 className="text-white lastica text-4xl font-semibold">
                 Projetos <span className="lg:inline hidden">em que atuei</span>
@@ -118,11 +116,11 @@ function App() {
               />
 
             </div>
-          </Container>
+          </div>
         </GradientSection>
 
         <GradientSection index={3} id="contact" height="lg:h-[615px] h-[825px]">
-          <Container className="lg:px-20 pr-5 pl-5">
+          <div className="lg:mx-32 mx-6">
             <Row className="pt-24 pb-5">
               <Col lg={6} xs={12}>
                 <Row className="flex-col justify-between relative h-full">
@@ -154,7 +152,7 @@ function App() {
                 </div>
               </Col>
             </Row>
-          </Container>
+          </div>
         </GradientSection>
       </>
   );

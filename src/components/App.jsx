@@ -43,10 +43,10 @@ function App() {
                 </div>
               </Col>
               <Col lg={3} xs={12}>
-                <video className="transform -rotate-45 w-[6rem] mr-2 lg:flex hidden" autoPlay loop muted>
+                <video className="transform -rotate-45 w-[6rem] mr-2 lg:flex hidden" autoPlay loop muted poster={require('../assets/img/lavagifs/lava_prop_2_poster.webp')}>
                   <source src={require('../assets/img/lavagifs/lava_prop_2.webm')} type="video/webm"/>
                 </video>
-                <video className="transform lg:-ms-10 lg:-mt-10 m-[auto] lg:w-[18rem] w-[12rem] lg:my-0 mt-20" autoPlay loop muted>
+                <video className="transform lg:-ms-10 lg:-mt-10 m-[auto] lg:w-[18rem] w-[12rem] lg:my-0 mt-20" autoPlay loop muted poster={require('../assets/img/lavagifs/lava_prop_4_poster.webp')}>
                   <source src={require('../assets/img/lavagifs/lava_prop_4.webm')} type="video/webm"/>
                 </video>
               </Col>
@@ -61,10 +61,10 @@ function App() {
               <h3 className="text-fuchsia-500 lastica text-xl font-bold lg:-mb-10 mb-4">Um pequeno resumo...</h3>
               <Col lg={{span: 6, order: 1}} xs={{span: 12, order: 2}}>
                 <div className="mb-4">
-                  <video className="lg:ms-24 ms-36 lg:mt-10 mt-5 transform rotate-[260deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted>
+                  <video className="lg:ms-24 ms-36 lg:mt-10 mt-5 transform rotate-[260deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted poster={require('../assets/img/lavagifs/lava_prop_1_poster.webp')}>
                     <source src={require('../assets/img/lavagifs/lava_prop_1.webm')} type="video/webm"/>
                   </video>
-                  <video className="lg:ms-3 ms-16 lg:-mt-80 -mt-56 transform rotate-[75deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted>
+                  <video className="lg:ms-3 ms-16 lg:-mt-80 -mt-56 transform rotate-[75deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted poster={require('../assets/img/lavagifs/lava_prop_3_poster.webp')}>
                     <source src={require('../assets/img/lavagifs/lava_prop_3.webm')} type="video/webm"/>
                   </video>
                 </div>
@@ -119,7 +119,7 @@ function App() {
           </div>
         </GradientSection>
 
-        <GradientSection index={3} id="contact" height="lg:h-[615px] h-[750px]">
+        <GradientSection index={3} id="contact" height="lg:h-[550px] h-[750px]">
           <div className="lg:mx-32 mx-6">
             <Row className="lg:pt-24 pt-0 pb-5">
               <Col lg={6} xs={12}>
@@ -146,7 +146,7 @@ function App() {
               </Col>
               <Col lg={6} xs={12}>
                 <div className="flex justify-center">
-                  <video className="lg:w-[80%] w-[70%]" autoPlay loop muted>
+                  <video className="lg:w-[80%] w-[70%]" autoPlay loop muted poster={require('../assets/img/lavagifs/lava_prop_6_poster.webp')}>
                     <source src={require('../assets/img/lavagifs/lava_prop_6.webm')} type="video/webm"/>
                   </video>
                 </div>

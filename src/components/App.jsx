@@ -55,10 +55,10 @@ function App() {
         </GradientSection>
 
 
-        <GradientSection index={1} id="about" height="lg:h-[650px] h-[630px]">
+        <GradientSection index={1} id="about" height="lg:h-[650px] h-[600px]">
           <div className="lg:mx-32 mx-6">
             <Row className="lg:pt-32 pt-10 ">
-              <h3 className="text-fuchsia-500 lastica text-xl font-bold lg:-mb-10 mb-3">Um pequeno resumo...</h3>
+              <h3 className="text-fuchsia-500 lastica text-xl font-bold lg:-mb-10 mb-4">Um pequeno resumo...</h3>
               <Col lg={{span: 6, order: 1}} xs={{span: 12, order: 2}}>
                 <div className="mb-4">
                   <video className="lg:ms-24 ms-36 lg:mt-10 mt-5 transform rotate-[260deg] lg:w-[12rem] w-[8rem]" autoPlay loop muted>
@@ -71,7 +71,7 @@ function App() {
               </Col>
               <Col lg={{span: 6, order: 2}} xs={{span: 12, order: 1}}>
                 <p className="text-white tt-interfaces lg:text-3xl text-xl">
-                  Sou um estudante de Engenharia de Computação e Técnico em Informática aspirante a desenvolvedor em busca de minha primeira oportunidade profissional. Sou apaixonado por projetos de engenharia que impulsionam o progresso humano e almejo fazer minhas próprias contribuições no futuro.
+                  Sou um estudante de Engenharia de Computação, com formação técnica em Informática, entusiasmado em dar os primeiros passos na carreira de desenvolvedor. Meu foco está no desenvolvimento Full-Stack e na exploração do vasto campo da ciência de dados.
                 </p>
               </Col>
             </Row>
@@ -94,21 +94,21 @@ function App() {
             </Row>
             <div className="lg:flex block lg:mx-28 mx-3 align-middle justify-between mt-10">
               <ProjectCard
-                  title="Exemplo"
+                  title="Em breve"
                   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                   url="https://teste.com"
                   image="https://placehold.it/500x500"
                   variation="right"
               />
               <ProjectCard
-                  title="Exemplo2"
+                  title="Em breve"
                   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                   url="https://teste.com"
                   image="https://placehold.it/500x500"
                   variation="left"
               />
               <ProjectCard
-                  title="Exemplo3"
+                  title="Em breve"
                   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                   url="https://teste.com"
                   image="https://placehold.it/500x500"
@@ -119,9 +119,9 @@ function App() {
           </div>
         </GradientSection>
 
-        <GradientSection index={3} id="contact" height="lg:h-[615px] h-[825px]">
+        <GradientSection index={3} id="contact" height="lg:h-[615px] h-[750px]">
           <div className="lg:mx-32 mx-6">
-            <Row className="pt-24 pb-5">
+            <Row className="lg:pt-24 pt-0 pb-5">
               <Col lg={6} xs={12}>
                 <Row className="flex-col justify-between relative h-full">
                   <h2 className="tt-interfaces text-3xl text-fuchsia-500 font-bold tracking-wider lg:mb-0 mb-16">Entre em contato</h2>

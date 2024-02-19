@@ -39,7 +39,7 @@ export default function ProjectCard({title, description, url, image, variation})
             <CustomButton onClick={handleOpen} backgroundColor="#2c1e4a" textColor="white">Saiba Mais</CustomButton>
           </div>
         </div>
-        <Modal open={open}>
+        <Modal open={open} onClose={handleClose}>
           <div className="project-modal lg:w-[80vw] lg:h-[80vh] w-[100vw] h-[99vh] lg:opacity-100 opacity-90 fade-in">
             <Row className="flex">
               <span className="text-4xl text-end lg:my-0 my-7">

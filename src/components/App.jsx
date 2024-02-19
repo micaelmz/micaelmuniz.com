@@ -15,14 +15,14 @@ function App() {
   return (
       <>
 
-        <GradientSection index={0} id="home" height="lg:h-[650px] h-[725px]">
+        <GradientSection index={0} id="home" height="lg:h-[100vh] h-[100vh]">
           <div className="lg:mx-32 mx-6">
             <Row className="lg:pt-24">
               <Col lg={9} xs={12} className="pt-28 lg:mt-0 mt-16">
                 <h1 className="text-white text-nowrap lastica font-bold lg:text-[44px] text-[30px]">
                   <span className="lg:hidden block">Olá, sou </span>
                   <span className="lg:inline hidden">Olá, sou </span>
-                  Micael Muniz</h1>
+                  Micael <i className="icon-image"></i> Muniz</h1>
                 <TypeAnimation
                     sequence={[
                       'e sou Desenvolvedor Full Stack',
@@ -119,7 +119,7 @@ function App() {
           </div>
         </GradientSection>
 
-        <GradientSection index={3} id="contact" height="lg:h-[550px] h-[750px]">
+        <GradientSection index={3} id="contact" height="lg:h-[85vh] h-[90vh]">
           <div className="lg:mx-32 mx-6">
             <Row className="lg:pt-24 pt-0 pb-5">
               <Col lg={6} xs={12}>
@@ -131,7 +131,7 @@ function App() {
                     </a>
 
                     <h4 className="lastica text-white text-xl mb-2 mt-5">TELEFONE</h4>
-                    <a href="whatsapp://send?phone=551140402024"><p className="tt-interfaces text-white text-xl tracking-wider">(11) 4040-2024</p></a>
+                    <a href="tel:+551140402024"><p className="tt-interfaces text-white text-xl tracking-wider">(11) 4040-2024</p></a>
                   </div>
 
                   <div className="flex p-6 border border-white border-solid border-1.5 lg:w-4/5 w-[94%] lg:mx-3 ml-auto mr-auto lg:mt-0 mt-9">

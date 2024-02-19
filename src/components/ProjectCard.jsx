@@ -40,43 +40,46 @@ export default function ProjectCard({title, description, url, image, variation})
           </div>
         </div>
         <Modal open={open} onClose={handleClose}>
-          <div className="project-modal lg:w-[80vw] lg:h-[80vh] w-[100vw] h-[99vh] lg:opacity-100 opacity-90 fade-in">
-            <Row className="flex">
-              <span className="text-4xl text-end lg:my-0 my-7">
-                <CloseIcon onClick={handleClose} sx={{ cursor: "pointer", color: "red" }} fontSize="inherit"/>
-              </span>
-            </Row>
+          <article>
+            <div aria-expanded="true" className="project-modal lg:w-[80vw] lg:h-[80vh] w-[100vw] h-[99vh] lg:opacity-100 opacity-90 fade-in">
+              <Row className="flex">
+                <span className="text-4xl text-end lg:my-0 my-7">
+                  <CloseIcon aria-label="Fechar detalhes do projeto" onClick={handleClose} sx={{cursor: "pointer", color: "red"}} fontSize="inherit"/>
+                </span>
+              </Row>
 
-            <Row className="lg:ms-10 -ms-2 h-full">
-              <Col lg={6} xs={12}>
-                <div className={`modal-text-box lg:h-[62%] h-[125%] ${draw ? 'draw' : ''}`} id="modal-text-box">
-                  <h1 className="text-white lastica text-4xl">{title}</h1>
-                  <p className="text-white tt-interfaces">
-                    {description}
-                  </p>
-                  {url ? (
-                      <a href={url} target="_blank">
-                        <CustomButton backgroundColor="#d63cbd" textColor="white" className="lg:w-1/3 w-2/5">
-                          Acessar
+              <Row className="lg:ms-10 -ms-2 h-full">
+                <Col lg={6} xs={12}>
+                  <div className={`modal-text-box lg:h-[62%] h-[125%] ${draw ? 'draw' : ''}`} id="modal-text-box">
+                    <h3 className="text-white lastica text-4xl">{title}</h3>
+                    <p className="text-white tt-interfaces">{description}</p>
+                    {url ? (
+                        <a href={url} target="_blank" rel="noreferrer" aria-label="Acessar site do projeto">
+                          <CustomButton backgroundColor="#d63cbd" textColor="white" className="lg:w-1/3 w-2/5">
+                            Acessar
+                          </CustomButton>
+                        </a>
+                    ) : (
+                        <CustomButton backgroundColor="#d63cbd" textColor="white" className="w-2/5">
+                          Em breve
                         </CustomButton>
-                      </a>
-                  ) : (
-                      <CustomButton backgroundColor="#d63cbd" textColor="white" className="w-2/5">
-                        Em breve
-                      </CustomButton>
-                  )}
-                </div>
-              </Col>
-              <Col lg={6} xs={12}>
-                <Row className="lg:justify-end justify-center lg:mt-0 mt-24">
-                  <video className={`lg:w-[350px] w-[290px] ${variations[variation].background}`} autoPlay loop muted poster={require('../assets/img/lavagifs/lava_prop_5_poster.webp')}>
-                    <source src={require('../assets/img/lavagifs/lava_prop_5.webm')} type="video/webm"/>
-                  </video>
-                  <img src={image} className={`lg:ml-0 ml-16 rounded-full lg:w-[272px] w-[220px] aspect-square ${variations[variation].foreground}`} alt="project"/>
-                </Row>
-              </Col>
-            </Row>
-          </div>
+                    )}
+                  </div>
+                </Col>
+                <Col lg={6} xs={12}>
+                  <Row className="lg:justify-end justify-center lg:mt-0 mt-24">
+                    <video className={`lg:w-[350px] w-[290px] ${variations[variation].background}`} aria-hidden="true" autoPlay loop muted
+                           poster={require('../assets/img/lavagifs/lava_prop_5_poster.webp')}>
+                      <source src={require('../assets/img/lavagifs/lava_prop_5.webm')} type="video/webm"/>
+                    </video>
+                    <img className={`lg:ml-0 ml-16 rounded-full lg:w-[272px] w-[220px] aspect-square ${variations[variation].foreground}`}
+                         alt="Imagem do projeto"
+                         src={image}/>
+                  </Row>
+                </Col>
+              </Row>
+            </div>
+          </article>
         </Modal>
       </>
   )

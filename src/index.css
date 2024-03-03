@@ -2,27 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: "Lastica";
-    src: url("assets/fonts/Lastica.woff2");
-}
 
-@font-face {
-    font-family: "TT Interfaces";
-    src: url("assets/fonts/TT_Interfaces.woff2");
-}
-
-video{
+video {
     opacity: 0.95;
 }
 
-.lastica {
-    font-family: "Lastica", sans-serif;
+.poppins{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
-.tt-interfaces {
-    font-family: "TT Interfaces", sans-serif;
+.venera-500 {
+    font-family: "Venera 500", sans-serif;
 }
+
 
 .gradient-up {
     background-image: linear-gradient(to bottom, #3f1e5a 0%, #2e1f3b 100%);
@@ -38,11 +32,12 @@ video{
     background: linear-gradient(180deg, #2e1f3b 0%, #3f1e5a 100%);
 }
 
-.project-card{
+.project-card {
     background-color: white;
     color: rgb(217 70 239);
 }
-.project-card:hover{
+
+.project-card:hover {
     background-color: rgb(217 70 239);
     color: white;
 }
@@ -124,8 +119,8 @@ video{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: "TT Interfaces", sans-serif;
-    letter-spacing: 0.1rem;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.2px;
     font-weight: bold;
     font-size: 0.8rem;
     cursor: pointer;

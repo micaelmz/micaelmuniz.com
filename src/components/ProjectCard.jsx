@@ -35,7 +35,7 @@ export default function ProjectCard({title, description, url, image, variation})
       <>
         <div className="project-card flex items-center justify-center transition-all duration-300 ease-in-out lg:w-[30%] w-[100%] aspect-[9/8] lg:mb-0 mb-10">
           <div className="text-center">
-            <p className="my-10 block lastica lg:text-3xl text-2xl">{title}</p>
+            <p className="my-10 block venera-500 lg:text-3xl text-2xl">{title}</p>
             <CustomButton onClick={handleOpen} backgroundColor="#2c1e4a" textColor="white">Saiba Mais</CustomButton>
           </div>
         </div>
@@ -52,10 +52,10 @@ export default function ProjectCard({title, description, url, image, variation})
               <Row className="lg:ms-10 -ms-2 h-full">
                 <Col lg={6} xs={12}>
                   <div className={`modal-text-box lg:h-[60%] h-[125%] ${draw ? 'draw' : ''}`} id="modal-text-box">
-                    <h3 className="text-white lastica text-4xl">
+                    <h3 className="text-white venera-500 text-4xl">
                       {title}
                     </h3>
-                    <p className="text-white tt-interfaces text-base">
+                    <p className="text-white poppins text-base">
                       {description}
                     </p>
                     {url ? (
@@ -74,8 +74,8 @@ export default function ProjectCard({title, description, url, image, variation})
                 <Col lg={6} xs={12}>
                   <Row className="lg:justify-end justify-center lg:mt-0 mt-24">
                     <video className={`lg:w-[375px] w-[290px] ${variations[variation].background}`} aria-hidden="true" autoPlay loop muted
-                           poster={require('../assets/img/lavagifs/lava_prop_5_poster.webp')}>
-                      <source src={require('../assets/img/lavagifs/lava_prop_5.webm')} type="video/webm"/>
+                           poster="https://res.cloudinary.com/dtewu315j/image/upload/f_auto,q_auto/lava_prop_5_poster">
+                      <source src="https://res.cloudinary.com/dtewu315j/video/upload/f_auto:video,q_auto/lava_prop_5" type="video/webm"/>
                     </video>
                     <img className={`lg:ml-0 ml-16 rounded-full lg:w-[300px] w-[220px] aspect-square ${variations[variation].foreground}`}
                          alt="Imagem do projeto"

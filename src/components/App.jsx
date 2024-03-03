@@ -108,6 +108,12 @@ function App() {
                 </Row>
                 <div className="lg:flex block lg:mx-28 mx-3 align-middle justify-between mt-10">
                   <ProjectCard
+                      title="Rovena"
+                      description="Rovena é uma ferramenta de combate ao cibercrime, que utiliza inteligência artificial de processamento de linguagem natural para monitorar redes sociais e identificar crimes virtuais. Este projeto foi apresentado como uma solução para o ODS 16 da ONU, na competição internacional Laboratório de Ideias, promovida pelo prestigioso IEEE."
+                      image={require("../assets/img/rovena_logo.webp")}
+                      variation="right"
+                  />
+                  <ProjectCard
                       title="RU Sender"
                       description="Robô em Python para automatizar a distribuição do cardápio do Restaurante Universitário (RU) da UEFS. Extraindo os dados do PDF do cardápio no site da universidade, armazenando-os em um banco de dados, então, o sistema o envia via WhatsApp aos estudantes solicitantes."
                       url="https://github.com/micaelmz/auto-sender-menu-uefs"
@@ -118,14 +124,8 @@ function App() {
                       title="You Shop"
                       description="Um projeto demonstrativo de uma loja on-line completa, feita em Python com o framework Flask, contendo um painel administrativo público, RESTful API, sistema de usuários, notificação, autenticação, produtos, estoque, avaliações, busca, pedidos, pagamentos (pix) e muito mais."
                       url="https://github.com/micaelmz/you-shop"
-                      image={require("../assets/img/youshop_logo.webp")}
+                      image={require("../assets/img/youshop2_logo.webp")}
                       variation="left"
-                  />
-                  <ProjectCard
-                      title="Rovena"
-                      description="Rovena é uma ferramenta de combate ao cibercrime, que utiliza inteligência artificial de processamento de linguagem natural para monitorar redes sociais e identificar crimes virtuais. Este projeto foi apresentado como uma solução para o ODS 16 da ONU, na competição internacional Laboratório de Ideias, promovida pelo prestigioso IEEE."
-                      image={require("../assets/img/rovena_logo.webp")}
-                      variation="right"
                   />
                 </div>
                 <div className="ms-3 mt-3">

@@ -108,8 +108,8 @@ function App() {
                 </Row>
                 <div className="lg:flex block lg:mx-28 mx-3 align-middle justify-between mt-10">
                   <ProjectCard
-                      title="Enviador de Cardápio"
-                      description="Desenvolvi um robô em Python para automatizar a distribuição do cardápio do Restaurante Universitário (RU) da UEFS. O processo inclui a extração semanal dos dados do PDF do cardápio no site da universidade, armazenando-os em um banco de dados, então, o sistema envia as informações via WhatsApp aos estudantes que solicitarem."
+                      title="RU Sender"
+                      description="Robô em Python para automatizar a distribuição do cardápio do Restaurante Universitário (RU) da UEFS. Extraindo os dados do PDF do cardápio no site da universidade, armazenando-os em um banco de dados, então, o sistema o envia via WhatsApp aos estudantes solicitantes."
                       url="https://github.com/micaelmz/auto-sender-menu-uefs"
                       image={require("../assets/img/cruefs_logo.webp")}
                       variation="right"
@@ -123,7 +123,7 @@ function App() {
                   />
                   <ProjectCard
                       title="Rovena"
-                      description="Rovena é uma sofisticada ferramenta de combate ao cibercrime, com capacidade de monitorar redes sociais e aplicar inteligência artificial de processamento de linguagem natural para identificar e rastrear crimes virtuais. Este projeto foi apresentado como uma solução para o Objetivo de Desenvolvimento Sustentável (ODS) 16 da ONU, na competição internacional Laboratório de Ideias, promovida pelo prestigioso IEEE."
+                      description="Rovena é uma ferramenta de combate ao cibercrime, que utiliza inteligência artificial de processamento de linguagem natural para monitorar redes sociais e identificar crimes virtuais. Este projeto foi apresentado como uma solução para o ODS 16 da ONU, na competição internacional Laboratório de Ideias, promovida pelo prestigioso IEEE."
                       image={require("../assets/img/rovena_logo.webp")}
                       variation="right"
                   />

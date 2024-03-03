@@ -39,9 +39,10 @@ export default function ProjectCard({title, description, url, image, variation})
             <CustomButton onClick={handleOpen} backgroundColor="#2c1e4a" textColor="white">Saiba Mais</CustomButton>
           </div>
         </div>
+
         <Modal open={open} onClose={handleClose}>
           <article>
-            <div aria-expanded="true" className="project-modal lg:w-[80vw] lg:h-[80vh] w-[100vw] h-[99vh] lg:opacity-100 opacity-90 fade-in">
+            <div aria-expanded="true" className="project-modal lg:w-[80vw] lg:h-[80vh] w-[100vw] h-[100vh] lg:opacity-100 opacity-90 fade-in">
               <Row className="flex">
                 <span className="text-4xl text-end lg:my-0 my-7">
                   <CloseIcon aria-label="Fechar detalhes do projeto" onClick={handleClose} sx={{cursor: "pointer", color: "red"}} fontSize="inherit"/>
@@ -50,9 +51,13 @@ export default function ProjectCard({title, description, url, image, variation})
 
               <Row className="lg:ms-10 -ms-2 h-full">
                 <Col lg={6} xs={12}>
-                  <div className={`modal-text-box lg:h-[62%] h-[125%] ${draw ? 'draw' : ''}`} id="modal-text-box">
-                    <h3 className="text-white lastica text-4xl">{title}</h3>
-                    <p className="text-white tt-interfaces">{description}</p>
+                  <div className={`modal-text-box lg:h-[60%] h-[125%] ${draw ? 'draw' : ''}`} id="modal-text-box">
+                    <h3 className="text-white lastica text-4xl">
+                      {title}
+                    </h3>
+                    <p className="text-white tt-interfaces text-base">
+                      {description}
+                    </p>
                     {url ? (
                         <a href={url} target="_blank" rel="noreferrer" aria-label="Acessar site do projeto">
                           <CustomButton backgroundColor="#d63cbd" textColor="white" className="lg:w-1/3 w-2/5">
@@ -60,7 +65,7 @@ export default function ProjectCard({title, description, url, image, variation})
                           </CustomButton>
                         </a>
                     ) : (
-                        <CustomButton backgroundColor="#d63cbd" textColor="white" className="w-2/5">
+                        <CustomButton backgroundColor="#d63cbd" textColor="white" className="w-3/6">
                           Em breve
                         </CustomButton>
                     )}

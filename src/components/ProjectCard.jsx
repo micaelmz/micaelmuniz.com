@@ -68,11 +68,11 @@ export default function ProjectCard({title, description, url, image, variation})
                 </Col>
                 <Col lg={6} xs={12}>
                   <Row className="lg:justify-end justify-center lg:mt-0 mt-24">
-                    <video className={`lg:w-[350px] w-[290px] ${variations[variation].background}`} aria-hidden="true" autoPlay loop muted
+                    <video className={`lg:w-[375px] w-[290px] ${variations[variation].background}`} aria-hidden="true" autoPlay loop muted
                            poster={require('../assets/img/lavagifs/lava_prop_5_poster.webp')}>
                       <source src={require('../assets/img/lavagifs/lava_prop_5.webm')} type="video/webm"/>
                     </video>
-                    <img className={`lg:ml-0 ml-16 rounded-full lg:w-[272px] w-[220px] aspect-square ${variations[variation].foreground}`}
+                    <img className={`lg:ml-0 ml-16 rounded-full lg:w-[300px] w-[220px] aspect-square ${variations[variation].foreground}`}
                          alt="Imagem do projeto"
                          src={image}/>
                   </Row>

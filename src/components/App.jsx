@@ -10,6 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import {TypeAnimation} from "react-type-animation";
 import {Fade, Slide} from "react-awesome-reveal";
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 
 function App() {
 
@@ -92,14 +93,14 @@ function App() {
             </Fade>
           </GradientSection>
 
-          <GradientSection index={2} id="projects" height="lg:h-[650px] h-[1250px]">
+          <GradientSection index={2} id="projects" height="lg:h-[610px] h-[1280px]">
             <Fade triggerOnce delay={100}>
               <div className="flex">
                 <hr className="w-2/3 mx-auto text-white"></hr>
               </div>
 
               <div className="lg:mx-32 mx-6">
-                <Row className="lg:pt-24 pt-5">
+                <Row className="pt-24">
                   <h2 className="text-white lastica text-4xl font-semibold">
                     Projetos <span className="lg:inline hidden">em que atuei</span>
                   </h2>
@@ -127,9 +128,10 @@ function App() {
                       variation="right"
                   />
                 </div>
-                <div className="flex justify-center mt-10">
+                <div className="ms-3 mt-3">
                   <a href="https://github.com/stars/micaelmz/lists/projetos" target="_blank" rel="noreferrer" aria-label="Ver mais projetos no GitHub">
-                    <CustomButton backgroundColor="#d63cbd" textColor="white">Mais projetos</CustomButton>
+                    <GitHubIcon style={{color: "white"}} fontSize="medium"/>
+                    <span className="ms-1 text-white tt-interfaces text-sm tracking-wider underline">Ver mais projetos no GitHub</span>
                   </a>
                 </div>
               </div>

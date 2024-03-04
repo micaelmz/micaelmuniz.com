@@ -55,7 +55,7 @@ export default function ProjectCard({title, description, url, image, variation})
                     <h3 className="text-white venera-500 text-4xl">
                       {title}
                     </h3>
-                    <p className="text-white poppins text-base">
+                    <p className="text-white poppins lg:text-base text-sm">
                       {description}
                     </p>
                     {url ? (

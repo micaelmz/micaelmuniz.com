@@ -117,7 +117,7 @@ function App() {
                       variation="right"
                   />
                   <ProjectCard
-                      title="RU Sender"
+                      title="RU Bot"
                       description="Robô em Python para automatizar a distribuição do cardápio do Restaurante Universitário (RU) da UEFS. Extraindo os dados do PDF do cardápio no site da universidade, armazenando-os em um banco de dados, então, o sistema o envia via WhatsApp aos estudantes solicitantes."
                       url="https://github.com/micaelmz/auto-sender-menu-uefs"
                       image="https://res.cloudinary.com/dtewu315j/image/upload/f_auto,q_auto/cruefs_logo"

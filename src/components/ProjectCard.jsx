@@ -33,8 +33,7 @@ export default function ProjectCard({title, description, url, image, variation})
   return (
       // todo: em caso de hover aplicar a foto do projeto com um filtro rosa como background, uma ideia é criar uma nova div já com esse background mas com opacity 0 e ao passar o mouse aplicar um transition para opacity 1, e no mobile nao ser hover mas sim o padrao
       <>
-        <div
-            className="project-card flex my-auto items-center justify-center transition-all duration-300 ease-in-out lg:w-[30%] w-[100%] aspect-[9/8] lg:mb-0 mb-10">
+        <div className="project-card flex lg:my-auto mb-8 items-center justify-center transition-all duration-300 ease-in-out lg:w-[30%] w-[100%] aspect-[9/8]">
           <div className="text-center">
             <p className="my-10 block venera-500 lg:text-3xl text-2xl">{title}</p>
             <CustomButton onClick={handleOpen} backgroundColor="#2c1e4a" textColor="white">Saiba Mais</CustomButton>

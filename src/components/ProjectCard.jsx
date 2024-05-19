@@ -53,9 +53,10 @@ export default function ProjectCard({title, description, url, image, variation})
               </Row>
 
               <Row className="h-[90%]">
-                <Col lg={6} xs={12} className="h-full flex">
-                  <div className="my-auto">
-                    <div className={`modal-text-box ${draw ? 'draw' : ''}`}
+
+                <Col lg={6} xs={12} className="lg:h-full h-[40%] flex">
+                  <div className="lg:my-auto my-[0%]">
+                    <div className={`modal-text-box lg:gap-[2.5rem] gap-[2rem] lg:mb-[10%] lg:ml-[12%] m-[3%] ${draw ? 'draw' : ''}`}
                          id="modal-text-box">
                       <h3 className="text-white venera-500 text-4xl">
                         {title}
@@ -66,20 +67,24 @@ export default function ProjectCard({title, description, url, image, variation})
                       {url ? (
                           <a href={url} target="_blank" rel="noreferrer"
                              aria-label="Acessar site do projeto">
-                            <CustomButton backgroundColor="#d63cbd" textColor="white"
-                                          className="lg:w-1/3 w-2/5">
-                              Acessar
+                            <CustomButton
+                                backgroundColor="#d63cbd" textColor="white"
+                                className="lg:w-1/3 w-2/5">
+                                Acessar
                             </CustomButton>
                           </a>
                       ) : (
-                          <CustomButton backgroundColor="#d63cbd" textColor="white" className="w-3/6">
-                            Em breve
+                          <CustomButton
+                              backgroundColor="#d63cbd" textColor="white"
+                              className="w-3/6">
+                              Em breve
                           </CustomButton>
                       )}
                     </div>
                   </div>
                 </Col>
-                <Col lg={6} xs={12} className="h-full pb-[5%]">
+
+                <Col lg={6} xs={12} className="lg:h-full h-[40%] lg:pb-[5%] pb-[0%] lg:mt-[0rem] mt-[4rem]">
                   <div className="flex h-full">
                     <div className="m-auto w-[110%]">
                       <video className={`${variations[variation].background}`} aria-hidden="true" autoPlay loop muted

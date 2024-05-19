@@ -73,12 +73,10 @@ video {
     border: 1.5px solid transparent; /* Começa com borda transparente */
     padding: 7.5%;
     position: relative;
-    gap: 3.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: border-color 0.25s ease-out; /* Transição para a cor da borda */
-    margin: 0 0 10% 12%;
 }
 
 .modal-text-box::before,
